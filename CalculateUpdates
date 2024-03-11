@@ -1,0 +1,40 @@
+import java.io.StringBufferInputStream;
+import java.util.Scanner;
+
+public class SplitClass {
+    public static void main(String[] args) {
+        Scanner vvod = new Scanner(System.in);
+        System.out.println("Ввести: ");
+        String a = vvod.nextLine();
+        System.out.println(summa(a));
+        }
+
+    static String summa(String a) {
+        String[] items = a.split(" ");
+        double a1 = Double.parseDouble(items[0]);
+        double a2 = Double.parseDouble(items[1]);
+        double otvet = 0;
+        String move = items[2];
+        switch (move) {
+            case "+":
+                otvet = a1 + a2;
+                break;
+            case "-":
+                otvet = a1 - a2;
+                break;
+            case "*":
+                otvet = a1 * a2;
+                break;
+            case "/":
+                otvet = a1 / a2;
+                break;
+            case "%":
+                otvet = a1 / 100 * a2;
+                break;
+        }
+        System.out.println(otvet);
+        return items[2];
+
+
+    }
+}
