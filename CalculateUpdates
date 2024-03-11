@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class SplitClass {
     public static void main(String[] args) {
         Scanner vvod = new Scanner(System.in);
-        System.out.println("Ввести: ");
+        System.out.println("Введи два числа и действие через пробел : ");
         String a = vvod.nextLine();
         System.out.println(summa(a));
         }
